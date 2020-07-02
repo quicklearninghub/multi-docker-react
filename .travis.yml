@@ -16,7 +16,7 @@ after_sucess:
     # Log in to docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     # Take images and push them to docker hub
-    - docker push multi-client
-    - docker push multi-server
-    - docker push multi-nginx
-    - docker push multi-worker
+    - docker push "$DOCKER_ID"/multi-client
+    - docker push "$DOCKER_ID"/multi-server
+    - docker push "$DOCKER_ID"/multi-nginx
+    - docker push "$DOCKER_ID"/multi-worker
